@@ -1,0 +1,11 @@
+helmCharts:
+  - name: kannika
+    includeCRDs: false
+    valuesInline:
+      global:
+        kubernetes:
+          namespace: kannika-data
+      kubeVersionOverride: 1.28.0
+    releaseName: kannika
+    version: 0.11.1
+    repo: oci://quay.io/kannika/charts
