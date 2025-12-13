@@ -7,5 +7,5 @@ helmCharts:
           namespace: kannika-data
       kubeVersionOverride: 1.28.0
     releaseName: kannika
-    version: 0.11.1
+    version: 0.12.4
     repo: oci://quay.io/kannika/charts
