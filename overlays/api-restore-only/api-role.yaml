@@ -1,0 +1,81 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: api:resource-manager
+  namespace: kannika-data
+rules:
+  - apiGroups:
+      - kannika.io
+    resources:
+      - backups
+      - credentials
+      - eventhubs
+      - storages
+      - schemaregistries
+      - schemaregistrybackups
+    verbs:
+      # - create
+      - get
+      - list
+      - watch
+      # - update
+      # - patch
+      # - delete
+      # - deletecollection
+  - apiGroups:
+      - kannika.io
+    resources:
+      - restores
+      - schemaregistryrestores
+    verbs:
+      - create
+      - get
+      - list
+      - watch
+      # - update
+      # - patch
+      # - delete
+      # - deletecollection
+  - apiGroups:
+      - ""
+    resources:
+      - secrets
+    verbs:
+      # - create
+      - get
+      - list
+      - watch
+      # - update
+      # - patch
+      # - delete
+      # - deletecollection
+  - apiGroups:
+      - ""
+    resources:
+      - configmaps
+    verbs:
+      - create
+      - get
+      - list
+      - watch
+      - update
+      - patch
+      - delete
+      - deletecollection
+  - apiGroups:
+      - ""
+    resources:
+      - serviceaccounts
+      - pods
+    verbs:
+      - get
+      - list
+      - watch
+  - apiGroups:
+      - batch
+    resources:
+      - jobs
+    verbs:
+      - get
+      - list
+      - delete

@@ -19,3 +19,8 @@ kustomize build --enable-helm base/
 # Use the default chart with Roles instead of ClusterRoles
 kustomize build --enable-helm overlays/replace-rbac/
 ```
+
+```sh
+# Use the default chart with API restricted to restore-only
+kustomize build --enable-helm overlays/api-restore-only/
+```
