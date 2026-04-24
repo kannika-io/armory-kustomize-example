@@ -32,10 +32,10 @@ rules:
       - get
       - list
       - watch
-      # - update
-      # - patch
-      # - delete
-      # - deletecollection
+      - update
+      - patch
+      - delete
+      - deletecollection
   - apiGroups:
       - ""
     resources:
